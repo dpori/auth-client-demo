@@ -103,7 +103,7 @@ function generateWebpackConfigForCanister(name, info) {
         process: require.resolve("process/browser"),
         path: require.resolve("path"),
       }),
-      new webpack.EnvironmentPlugin(["CANISTER_ID"]),
+      // new webpack.EnvironmentPlugin(["CANISTER_ID"]),
       new CopyPlugin({
         patterns: [
           {

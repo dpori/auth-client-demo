@@ -16,11 +16,18 @@ const content = () => html`<div class="container">
   <p>To see how a canister views you, click this button!</p>
   <button type="button" id="whoamiButton" class="primary">Who am I?</button>
   <input type="text" readonly id="whoami" placeholder="your Identity" />
+  <input
+    type="text"
+    readonly
+    id="whoami2"
+    placeholder="your Identity in backend2"
+  />
   <button id="logout">log out</button>
 </div>`;
 
 export const renderLoggedIn = (
   actor: ActorSubclass<_SERVICE>,
+  actor2: ActorSubclass<_SERVICE>,
   authClient: AuthClient
 ) => {
   render(content(), document.getElementById("pageContent") as HTMLElement);
@@ -29,9 +36,12 @@ export const renderLoggedIn = (
     async () => {
       try {
         const response = await actor.whoami();
+        const response2 = await actor2.whoami();
         console.log(response);
         (document.getElementById("whoami") as HTMLInputElement).value =
           response.toString();
+        (document.getElementById("whoami2") as HTMLInputElement).value =
+          response2.toString();
       } catch (error) {
         console.error(error);
       }

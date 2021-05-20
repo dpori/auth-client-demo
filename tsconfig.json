@@ -18,7 +18,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "dfx-generated/whoami": ["./.dfx/local/canisters/whoami"]
+      "dfx-generated/whoami": ["./.dfx/ic/canisters/whoami/whoami.js"],
+      "dfx-generated/whoami_2": ["./.dfx/ic/canisters/whoami_2/whoami_2.js"]
     }
   },
 

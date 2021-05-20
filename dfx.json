@@ -4,6 +4,10 @@
       "main": "src/whoami/main.mo",
       "type": "motoko"
     },
+    "whoami_2": {
+      "main": "src/whoami/main.mo",
+      "type": "motoko"
+    },
     "www": {
       "dependencies": ["whoami"],
       "frontend": {
